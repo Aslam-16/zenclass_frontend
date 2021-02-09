@@ -10,7 +10,8 @@ class Quiz extends React.Component {
             options:[],
             quizEnd:false,
             score:0,
-            disabled:true
+            disabled:true,
+            check:false
         }
     }
     loadQuiz=()=>{
@@ -29,10 +30,20 @@ class Quiz extends React.Component {
         const {userAnswer,answer,score,currentIndex}=this.state;
         this.setState({currentIndex:this.state.currentIndex+1,userAnswer:null})
         answerarray.push(obj);
+         this.setState({check:false})
+        // this.reset();
         console.log("nexr",answerarray);
         // if(userAnswer){
         
         // }
+    }
+    skipped=()=> {
+        const {userAnswer,answer,score,currentIndex}=this.state;
+        obj[currentIndex]="skipped";
+        // answerarray.push(obj);
+        console.log("skip",answerarray);
+        this.nextQuestionHandler()
+
     }
     componentDidMount() {
         this.loadQuiz();
@@ -46,6 +57,7 @@ class Quiz extends React.Component {
     }
     pushtoary=(answer,id)=>{
             obj[id]=answer;
+            this.setState({check:true})
             console.log(answerarray);
         }
 
@@ -63,28 +75,48 @@ class Quiz extends React.Component {
             })
         }
     }
+    finishHandler=()=>{
+        answerarray.push(obj);
+        console.log("ovr",answerarray)
+        this.setState({quizEnd:true})
+
+    }
+    click=()=>{
+        this.setState({check:true})
+    }
+    reset=()=>{
+        this.setState({check:false})
+    }
     render(){
-        console.log("fffffffffff")
         const {question,options,currentIndex,userAnswer,quizEnd}=this.state
+        if(quizEnd){
+            return (
+                <div>
+                    <p>Thank you for filling the survey</p>
+                </div>
+            )
+        }
         return (<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="panel panel-container">
             <span>Question {currentIndex+1} of {QuizData.length}</span>
-        <h2 style={{textAlign:'left',paddingLeft: 140}}>{question}</h2>
+        <p class="quizquestion">{currentIndex+1}.{question}</p>
          <label class="container" style={{textAlign:'left'}}>{
-            options.map(option=><label class="container">
-                <span key={option.id}onClick={()=>this.pushtoary(option,this.state.currentIndex)}>
+            options.map(option=><label class="container" >
+                <span class="quizquestion" key={option.id}onClick={()=>this.pushtoary(option,this.state.currentIndex)}>
                 {option} 
-                </span> <input type="radio" name="radio"onClick={()=>this.pushtoary(option,this.state.currentIndex)}/>
+                </span> <input type="radio" name="radio" onClick={()=>this.pushtoary(option,this.state.currentIndex)}/>
   <span class="checkmark"></span></label>
             )
         }</label>
         {
             currentIndex<QuizData.length-1 && 
-            <button onClick={this.nextQuestionHandler}>Next Question</button>
+            <div>
+            <button className="click"onClick={this.nextQuestionHandler}>Next Question</button>
+             <button className="click"onClick={this.skipped}>skip</button></div>
         }
          {
             currentIndex===QuizData.length-1 && 
-            <button class="click" onClick={this.nextQuestionHandler}>Over</button>
+            <button className="click" onClick={this.finishHandler}>Over</button>
         }
     
 
