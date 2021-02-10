@@ -1,6 +1,6 @@
 import React from 'react';
 import {QuizData} from './QuizData';
-var answerarray=[],obj={};
+var answerarray=[],obj={}
 class Quiz extends React.Component {
     constructor(props) {
         super(props)
@@ -31,6 +31,7 @@ class Quiz extends React.Component {
         this.setState({currentIndex:this.state.currentIndex+1,userAnswer:null})
         answerarray.push(obj);
          this.setState({check:false})
+         console.log("check",this.state.checked)
         // this.reset();
         console.log("nexr",answerarray);
         // if(userAnswer){
@@ -45,6 +46,12 @@ class Quiz extends React.Component {
         this.nextQuestionHandler()
 
     }
+     skipend=()=> {
+        const {userAnswer,answer,score,currentIndex}=this.state;
+        obj[currentIndex]="skipped";
+        console.log("skip",answerarray);
+        this.finishHandler()
+     }
     componentDidMount() {
         this.loadQuiz();
     }
@@ -87,36 +94,83 @@ class Quiz extends React.Component {
     reset=()=>{
         this.setState({check:false})
     }
+//     finalanswer=()=>{
+//         console.log("from finalansers");
+//         for(var i=0;i<answerarray.length;i++){
+//            finalanswers.push( <ul>
+//           <li key={i}>{answerarray[i]}</li>
+//             </ul>)
+//         }
+
+//    }
+onchangevalue(event){
+    const checked = event.target.checked ;
+	const name    = event.target.name;
+
+    if(checked==true){
+        this.setState({check:true})
+    }
+    else         this.setState({check:false})
+     
+}
     render(){
         const {question,options,currentIndex,userAnswer,quizEnd}=this.state
         if(quizEnd){
+  
             return (
+                
                 <div>
                     <p>Thank you for filling the survey</p>
-                </div>
+                     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="panel panel-container"> 
+   <table class="styled-table"style={{width:999}}>
+  <thead class="tableheading">
+            <th style={{textAlign:'left'}}colspan="6" class="column">Answers</th>
+  </thead>
+    <thead class="active-head">
+        <tr class="active-head">
+            <th class="column">Question:No</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody style={{fontSize:20}}> {
+    Object.entries(answerarray[0]).map(([key, value]) => (
+    <tr class="active-row">
+            <td class="column">{key}</td>
+            <td >{value}</td>
+            </tr>
+    
+    ))}
+       </tbody></table> </div></div></div>
+              
             )
         }
         return (<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="panel panel-container">
-            <span>Question {currentIndex+1} of {QuizData.length}</span>
-        <p class="quizquestion">{currentIndex+1}.{question}</p>
+            <span style={{textAlign:'left'}} >Question {currentIndex+1} of {QuizData.length}</span>
+        <p class="quizquestion"style={{width:700,textAlign:'left'}}>{currentIndex+1}.{question}</p>
          <label class="container" style={{textAlign:'left'}}>{
             options.map(option=><label class="container" >
                 <span class="quizquestion" key={option.id}onClick={()=>this.pushtoary(option,this.state.currentIndex)}>
                 {option} 
-                </span> <input type="radio" name="radio" onClick={()=>this.pushtoary(option,this.state.currentIndex)}/>
+                </span> <input type="radio" name="radio"  onChange={(e)=>this.onchangevalue(e)}onClick={()=>this.pushtoary(option,this.state.currentIndex)}/>
   <span class="checkmark"></span></label>
             )
         }</label>
         {
             currentIndex<QuizData.length-1 && 
             <div>
-            <button className="click"onClick={this.nextQuestionHandler}>Next Question</button>
-             <button className="click"onClick={this.skipped}>skip</button></div>
+                 <button className="click"onClick={this.skipped}>skip</button>
+            <button className="click"style={{marginLeft: 12}}
+            onClick={this.nextQuestionHandler}>Next Question</button>
+            </div>
         }
          {
             currentIndex===QuizData.length-1 && 
-            <button className="click" onClick={this.finishHandler}>Over</button>
+            <div>
+                <button className="click"onClick={this.skipend}>skip</button>
+            <button className="click"style={{marginLeft: 12}} onClick={this.finishHandler}>Over</button>
+            </div>
         }
     
 
