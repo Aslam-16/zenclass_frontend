@@ -11,6 +11,7 @@ import Sidebar from './components/layouts/sidebar';
 import Query from './components/query';
 import Dashboard from './components/dashboard';
 import Quiz from './components/Quiz';
+import Class from './components/class';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Switch>
       <Route exact path="/" component={Query}/>
       <Route exact path="/quiz" component={Quiz}/>
+      <Route exact path="/class" component={Class}/>
       </Switch>
     </div>
     </Router>
