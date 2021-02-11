@@ -1,4 +1,5 @@
 import Linechart from './linechart';
+import Barchart from './barchart';
 function Dashboard(){
     return (
         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -33,7 +34,8 @@ function Dashboard(){
   <div style={{paddingTop: 15}}><span><button type="button" class="click">Join</button></span></div></div>
   </div>
 </div>
-{/* <div class="styled-table-outer"style={{marginLeft: 0,marginTop: 20}}>
+ 
+<div class="styled-table-outer"style={{marginLeft: 0,marginTop: 20}}>
   <div class="tableheading" >
 <p  class ="headbar" >Codekata<span class="week">Weekly</span><span class="once">Daily</span><span class="codekata"><img src="codekata.png"></img></span></p>
 
@@ -80,17 +82,18 @@ function Dashboard(){
 </div>
 <ul class="xAxis">
 	<li style={{paddingLeft: 41}}>Mon</li>
-	<li style={{paddingLeft: 15}}>Tue</li>
-	<li style={{paddingLeft: 10}}>Wed</li>
-	<li style={{paddingLeft: 15}}>Thu</li>
-	<li style={{paddingLeft: 13}}>Fri</li>
-	<li style={{paddingLeft: 10}}>Sat</li>
-	<li style={{paddingLeft: 13}}>Sun</li>
+	<li style={{paddingLeft: 35}}>Tue</li>
+	<li style={{paddingLeft: 33}}>Wed</li>
+	<li style={{paddingLeft: 33}}>Thu</li>
+	<li style={{paddingLeft: 35}}>Fri</li>
+	<li style={{paddingLeft: 32}}>Sat</li>
+	<li style={{paddingLeft: 30}}>Sun</li>
 	
 </ul>
+
 </div>
-</div> */}
-{/*<div class="styled-table-outer"style={{marginLeft: 20,marginTop: 20}}>
+</div>
+<div class="styled-table-outer"style={{marginLeft:0,marginTop: 20}}>
   <div class="tableheading" >
 <p  class ="headbar">Webkata<span class="week">Weekly</span><span class="once">Daily</span><span class="codekata"><img src="codekata.png"></img></span></p>
 
@@ -136,17 +139,17 @@ function Dashboard(){
 </div>
 <ul class="xAxis">
 	<li style={{paddingLeft: 41}}>Mon</li>
-	<li style={{paddingLeft: 15}}>Tue</li>
-	<li style={{paddingLeft: 10}}>Wed</li>
-	<li style={{paddingLeft: 15}}>Thu</li>
-	<li style={{paddingLeft: 13}}>Fri</li>
-	<li style={{paddingLeft: 10}}>Sat</li>
-	<li style={{paddingLeft: 13}}>Sun</li>
+	<li style={{paddingLeft: 35}}>Tue</li>
+	<li style={{paddingLeft: 33}}>Wed</li>
+	<li style={{paddingLeft: 33}}>Thu</li>
+	<li style={{paddingLeft: 35}}>Fri</li>
+	<li style={{paddingLeft: 32}}>Sat</li>
+	<li style={{paddingLeft: 30}}>Sun</li>
 	
 </ul>
 </div>
 </div>
-<div class="styled-table-outer"style={{marginLeft: 20,marginTop: 20}}>
+<div class="styled-table-outer"style={{marginLeft: 4,marginTop: 20}}>
   <div class="tableheading" >
 <p  class ="headbar"colspan="4" >Micro Arc<span class="week">Weekly</span><span class="once">Daily</span><span class="codekata"><img src="codekata.png"></img></span></p>
 
@@ -193,17 +196,17 @@ function Dashboard(){
 </div>
 <ul class="xAxis">
 	<li style={{paddingLeft: 41}}>Mon</li>
-	<li style={{paddingLeft: 15}}>Tue</li>
-	<li style={{paddingLeft: 10}}>Wed</li>
-	<li style={{paddingLeft: 15}}>Thu</li>
-	<li style={{paddingLeft: 13}}>Fri</li>
-	<li style={{paddingLeft: 10}}>Sat</li>
-	<li style={{paddingLeft: 13}}>Sun</li>
+	<li style={{paddingLeft: 35}}>Tue</li>
+	<li style={{paddingLeft: 33}}>Wed</li>
+	<li style={{paddingLeft: 33}}>Thu</li>
+	<li style={{paddingLeft: 35}}>Fri</li>
+	<li style={{paddingLeft: 32}}>Sat</li>
+	<li style={{paddingLeft: 30}}>Sun</li>
 	
 </ul>
 </div>
 </div>
-<div class="styled-table-outer"style={{marginLeft: 0,marginTop: 20}}>
+{/* <div class="styled-table-outer"style={{marginLeft: 0,marginTop: 20}}>
   <div class="tableheading" >
 <p  class ="headbar"style={{textAlign:'left'}}><span style={{paddingLeft:12}}>Assessments</span></p>
 
@@ -255,10 +258,10 @@ function Dashboard(){
 	<li style={{paddingLeft: 1}}>12th</li>
 	
 </ul>
-</div> */}
-{/* <p class="youtubetitle">Completed<span class="youtubetitle">Mark</span><span class="youtubelink"><a href="/#prerequisite">prerequisite</a></span></p> */}
-{/* </div> */}
 </div>
+<p class="youtubetitle">Completed<span class="youtubetitle">Mark</span><span class="youtubelink"><a href="/#prerequisite">prerequisite</a></span></p> 
+ </div>*/}
+</div> 
 </div>
     )
 }
