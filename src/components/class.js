@@ -22,10 +22,7 @@ class Class extends Component {
   <div class="panel panel-default">
     <div class="panel-heading active" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a  style={{
-    paddingBottom: 0,
-    height: 55
-}}role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
          <span>Webinar on Full Stack Development</span>
          <p class="presenter" style={{
     paddingTop: 5,color:"black",marginBottom: 0
