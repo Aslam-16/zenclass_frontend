@@ -12,14 +12,14 @@ function Query(){
     <tbody style={{fontSize:20}}>
         <tr class="active-row">
             <td><iframe class="youtube"  src="https://www.youtube.com/embed/il_t1WVLNxk"> </iframe></td>
-        <td style={{width: 600}}><p style={{
-    paddingLeft:25
+        <td style={{width: 600,paddingLeft:200}}><p style={{
+    paddingLeft:25,color:"black"
 }}>Date&nbsp;&nbsp;30/12/2020</p>
 <p style={{
-    paddingLeft: 65
+    paddingLeft: 25,color:"black"
 }}>Time&nbsp;&nbsp;Evening 6 to 7 pm</p>
 <p style={{
-paddingLeft: 3,paddingRight: 7
+paddingLeft: 0,paddingRight: 0,marginLeft:25,color:"black"
 }}>Topic&nbsp;&nbsp;Angular</p></td>
         </tr>
     </tbody>

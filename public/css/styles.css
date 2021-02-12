@@ -1062,17 +1062,17 @@ p.back-link {
 
   .green {
     color: rgb(72, 109, 16);
-    font-weight: bold;
+    font-weight:lighter;
   }
 
   .violet {
     color: rgb(138, 51, 138);
-    font-weight: bold;
+ font-weight:lighter;
   }
 
   .red {
     color: rgb(168, 28, 28);
-    font-weight: bold;
+ font-weight:lighter;
   }
 
 .styled-table {
@@ -1978,7 +1978,7 @@ a:hover {
   
 }
 
-.panel-heading a:before {
+/* .panel-heading a:before {
   font-family: 'Glyphicons Halflings';
   font-size:12px;
   content: "\e114";
@@ -1999,8 +1999,8 @@ a:hover {
      width:10px;
      height:10px;
      
-}
-.panel-heading.active {
+} */
+.panel-heading {
   background-color: #F0EFF4;
   }
 .panel-collapse {
@@ -2076,3 +2076,59 @@ float:"left";
 color:black;
 margin-bottom:0
 }
+
+
+
+/* NEW */
+
+
+.panel-heading .accordion-toggle:after {
+  
+  font-family: 'Glyphicons Halflings';
+  font-size:12px;
+  content: "\e114";
+
+  float: right;
+  transition: all 0.5s;
+
+  color:#5D267C;
+  width:5px;
+  height:5px;
+  margin-top:-15px;
+      margin-right: 12px;
+      background-color: #F0EFF4;
+
+  
+}
+
+.panel-heading .accordion-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\e114";
+  /* adjust as needed, taken from bootstrap.css */
+   -webkit-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   transform: rotate(180deg);
+   color:#edd5fc;
+   width:5px;
+   height:5px;
+   margin-top:-15px;
+    margin-right: 12px;
+    background-color: #F0EFF4;
+
+    
+   
+}
+.accordion-toggle.collapsed {
+  background-color: white;
+}
+.accordion-toggle{
+   background-color: #F0EFF4;
+}
+/* .panel-heading.collapsed {
+  background-color: white;
+}
+
+.panel-heading.accordion-toggle {
+  background-color: #F0EFF4;
+} */
+

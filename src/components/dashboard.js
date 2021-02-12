@@ -40,7 +40,8 @@ function Dashboard(){
 <p  class ="headbar" >Codekata<span class="week">Weekly</span><span class="once">Daily</span><span class="codekata"><img src="codekata.png"></img></span></p>
 
   </div>
-   <p class="centre">3rd Week</p>
+   <p class="centre"style={{paddingTop: 5,marginBottom:0
+}}>3rd Week</p>
 <div class="styled-table-dashboardinner" >
 <ul class="yAxis">
 	<li>25</li>
@@ -98,7 +99,8 @@ function Dashboard(){
 <p  class ="headbar">Webkata<span class="week">Weekly</span><span class="once">Daily</span><span class="codekata"><img src="codekata.png"></img></span></p>
 
   </div>
-   <p class="centre">Weekly Stats</p>
+   <p class="centre"style={{paddingTop: 5,marginBottom:0
+}}>Weekly Stats</p>
 <div class="styled-table-dashboardinner">
 <ul class="yAxis">
 	<li>25</li>
@@ -154,7 +156,8 @@ function Dashboard(){
 <p  class ="headbar"colspan="4" >Micro Arc<span class="week">Weekly</span><span class="once">Daily</span><span class="codekata"><img src="codekata.png"></img></span></p>
 
   </div>
-   <p class="centre">1st Week</p>
+   <p class="centre"style={{paddingTop: 5,marginBottom:0
+}}>1st Week</p>
 <div class="styled-table-dashboardinner">
 <ul class="yAxis">
 	<li>25</li>
