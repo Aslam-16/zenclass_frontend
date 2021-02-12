@@ -37,7 +37,8 @@ class Class extends Component {
       </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
+      <div class="panel-body"style={{borderTopWidth: 0
+}}>
  
 <div class="row">
     
@@ -83,7 +84,8 @@ class Class extends Component {
       </h4>
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
+      <div class="panel-body"style={{borderTopWidth: 0
+}}>
        
 <div class="row">
     
@@ -131,7 +133,8 @@ class Class extends Component {
       </h4>
     </div>
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
+      <div class="panel-body"style={{borderTopWidth: 0
+}}>
 <div class="row">
     
     <div class="col-sm-6"style={{

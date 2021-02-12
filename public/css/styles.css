@@ -8,8 +8,8 @@ body {
 
 
 
-a, a:hover, a:focus {
-  color: #30a5ff; }
+/* a, a:hover, a:focus {
+  color: #30a5ff; } */
 
 /* h1, h2, h3, h4, h5, h6 {
   color: #444444; } */
@@ -176,7 +176,7 @@ input.form-control {
 .dropdown em {
   margin: 0 5px; }
 
-.dropdown-menu > li > a {
+/* .dropdown-menu > li > a {
   padding: 5px 10px; }
 
 .dropdown-menu li .message-body a {
@@ -525,13 +525,13 @@ a.label:hover, a.label:focus {
   color: #444444; }
 
 .clickable {
-  cursor: pointer; }
+  cursor: pointer; } */
 
 /* .panel-heading span {
   margin: 0px;
   font-size: 14px; } */
 
-.panel-button-tab-right {
+/* .panel-button-tab-right {
   margin-left: 4px !important;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -742,7 +742,7 @@ a.label:hover, a.label:focus {
   padding: 15px; }
 
 .navbar {
-  border: 0; }
+  border: 0; } */
 
 .navbar input {
   border: 0;
@@ -852,7 +852,7 @@ a.label:hover, a.label:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin: 0px 0; }
 
-.profile-sidebar {
+/* .profile-sidebar {
   padding: 10px 0;
   border-bottom: 1px solid #e9ecf2; }
 
@@ -972,13 +972,13 @@ h1.page-header {
 
 .todo-list .checkbox {
   display: inline-block;
-  margin: 0px; }
+  margin: 0px; } */
 
-.panel-body input[type=checkbox]:checked + label {
+/* .panel-body input[type=checkbox]:checked + label {
   text-decoration: line-through;
-  color: #777; }
+  color: #777; } */
 
-.todo-list-item {
+/* .todo-list-item {
   list-style: none;
   line-height: 0.9;
   padding: 14px 15px 8px 15px; }
@@ -1017,7 +1017,7 @@ h1.page-header {
   height: 300px; }
 
 .chat-body small {
-  margin-left: 5px; }
+  margin-left: 5px; } */
 
 .table {
   background: #fff; }
@@ -1947,7 +1947,7 @@ a:hover {
   
 }
 
-
+/* webinar here */
 .panel-default .panel-heading {
   background: white;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
@@ -2003,7 +2003,13 @@ a:hover {
 .panel-heading.active {
   background-color: #F0EFF4;
   }
+.panel-collapse {
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.panel-body {
+  border-top-width: 0px;
 
+}
 .presenter {
   font-weight: normal;
   text-transform: capitalize;
@@ -2048,6 +2054,9 @@ a:hover {
 p {
   color:#5D267C;
   text-align:left;
+}
+.panel-default {
+border-width: 0;
 }
 .topnav2 {
   height: 100px;
