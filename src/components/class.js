@@ -23,10 +23,11 @@ class Class extends Component {
     <div class="panel-heading active" role="tab" id="headingOne">
       <h4 class="panel-title">
         <a  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         <span>Webinar On Full Stack Development</span><span class="size"style={{marginLeft: 242}}>15/2/2021</span> <br/>
-         <span class="presenter">by Aslam Ceo,Mytech services Alaska</span><span class="size" style={{marginLeft: 277}}>03.00 PM</span>
-          <div style={{paddingLeft:700,marginTop:-25}}><button  type="button" class="click">Register Now</button></div>
-        </a>
+         <span>Webinar on Full Stack Development</span><br/>
+         <span class="presenter">by Aslam,Ceo, Mytech services Alaska</span>
+         <div style={{paddingLeft:0,marginTop:-33,marginLeft: 120}}><span class="size"style={{marginLeft: 530,marginTop:-20}}>15/2/2021</span><br/><span class="size" style={{marginLeft: 530}}>03.00 PM</span>
+ <div style={{paddingLeft:700,marginTop:-25}}><button  type="button" class="click">Register Now</button></div>
+       </div> </a>
 
       </h4>
     </div>
@@ -66,9 +67,11 @@ class Class extends Component {
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          <span>Webinar On Full Stack Development</span><span class="size"style={{marginLeft: 242}}>15/2/2021</span> <br/>
-         <span class="presenter">by Aslam Ceo,Mytech services Alaska</span><span class="size" style={{marginLeft: 277}}>03.00 PM</span>
-          <div style={{paddingLeft:700,marginTop:-25}}><button  type="button" class="click">Register Now</button></div>
+          <span>Webinar on Full Stack Development</span><br/>
+         <span class="presenter">by Aslam,Ceo, Mytech services Alaska</span>
+         <div style={{paddingLeft:0,marginTop:-33,marginLeft: 120}}><span class="size"style={{marginLeft: 530,marginTop:-20}}>15/2/2021</span><br/><span class="size" style={{marginLeft: 530}}>03.00 PM</span>
+ <div style={{paddingLeft:700,marginTop:-25}}><button  type="button" class="click">Register Now</button></div>
+       </div>
         </a>
       </h4>
     </div>
@@ -110,9 +113,11 @@ class Class extends Component {
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <span>Webinar On Full Stack Development</span><span class="size"style={{marginLeft: 242}}>15/2/2021</span><br/>
-         <div><span class="presenter">by Aslam Ceo,Mytech services Alaska</span><span class="size" style={{marginLeft: 277}}>03.00 PM</span></div>
-         <div style={{paddingLeft:700,marginTop:-25}}><button  type="button" class="click">Register Now</button></div>
+            <span>Webinar on Full Stack Development</span><br/>
+         <div><span class="presenter">by Aslam,Ceo, Mytech services Alaska</span>
+         <div style={{paddingLeft:0,marginTop:-33,marginLeft: 120}}><span class="size"style={{marginLeft: 530,marginTop:-20}}>15/2/2021</span><br/><span class="size" style={{marginLeft: 530}}>03.00 PM</span>
+ <div style={{paddingLeft:700,marginTop:-25}}><button  type="button" class="click">Register Now</button></div>
+       </div></div>
         </a>
       </h4>
     </div>

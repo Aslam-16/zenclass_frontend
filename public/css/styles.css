@@ -95,7 +95,7 @@ input.form-control {
   height: 75px;
   margin-bottom: 0px;
   padding-bottom: 35px;
-  width: 70px;
+  width: 80px;
 
 }
 .navbar-header .navbar-brand {
@@ -1970,7 +1970,7 @@ a:hover {
   color: black;
   font-size: 16px;
   font-weight:bolder;
-  text-transform:capitalize;
+  text-transform:none;
   letter-spacing: 1px;
   word-spacing: 3px;
   text-decoration: none;
