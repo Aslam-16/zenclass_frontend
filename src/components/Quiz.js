@@ -1,5 +1,17 @@
 import React from 'react';
 import {QuizData} from './QuizData';
+import Modal from "react-responsive-modal";
+import ReactModal from 'react-modal';
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 var answerarray=[],obj={}
 class Quiz extends React.Component {
     constructor(props) {
@@ -11,9 +23,23 @@ class Quiz extends React.Component {
             quizEnd:false,
             score:0,
             disabled:true,
-            check:false
+            check:false,
+            sign: false,
+            login: false,
+             showModal: false
+            
         }
+      
     }
+    handleOpenModal=()=> {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal=()=> {
+    this.setState({ showModal: false });
+  }
+ 
+
     loadQuiz=()=>{
         const{currentIndex}=this.state;
         this.setState(()=>{
@@ -94,15 +120,7 @@ class Quiz extends React.Component {
     reset=()=>{
         this.setState({check:false})
     }
-//     finalanswer=()=>{
-//         console.log("from finalansers");
-//         for(var i=0;i<answerarray.length;i++){
-//            finalanswers.push( <ul>
-//           <li key={i}>{answerarray[i]}</li>
-//             </ul>)
-//         }
 
-//    }
 onchangevalue(event){
     const checked = event.target.checked ;
 	const name    = event.target.name;
@@ -115,6 +133,7 @@ onchangevalue(event){
 }
     render(){
         const {question,options,currentIndex,userAnswer,quizEnd}=this.state
+        const { login, sign } = this.state;
         if(quizEnd){
   
             return (
@@ -146,18 +165,27 @@ onchangevalue(event){
             )
         }
         return (<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-    <div class="panel panel-container">
-            <span style={{textAlign:'left'}} >Question {currentIndex+1} of {QuizData.length}</span>
+            
+    <div class="panel panel-container"style={{borderWidth:0}}>
+         <ReactModal 
+           isOpen={this.state.showModal}
+           contentLabel="Minimal Modal Example"
+           className='ReactModalclass'
+        >
+              <span style={{textAlign:'left'}} >Question {currentIndex+1} of {QuizData.length}</span>
         <p class="quizquestion"style={{width:700,textAlign:'left'}}>{currentIndex+1}.{question}</p>
          <label class="container" style={{textAlign:'left'}}>{
             options.map(option=><label class="container" >
-                <span class="quizquestion" key={option.id}onClick={()=>this.pushtoary(option,this.state.currentIndex)}>
+                <span class="quizquestion" key={option.id}
+                onClick={()=>this.pushtoary(option,this.state.currentIndex)}>
                 {option} 
-                </span> <input type="radio" name="radio"  onChange={(e)=>this.onchangevalue(e)}onClick={()=>this.pushtoary(option,this.state.currentIndex)}/>
-  <span class="checkmark"></span></label>
+                </span> <input type="radio" name="radio"  
+                onChange={(e)=>this.onchangevalue(e)}
+                onClick={()=>this.pushtoary(option,this.state.currentIndex)}/>
+                <span class="checkmark"></span></label>
             )
         }</label>
-        {
+         {
             currentIndex<QuizData.length-1 && 
             <div>
                  <button className="click"onClick={this.skipped}>skip</button>
@@ -171,9 +199,17 @@ onchangevalue(event){
                 <button className="click"onClick={this.skipend}>skip</button>
             <button className="click"style={{marginLeft: 12}} onClick={this.finishHandler}>Over</button>
             </div>
-        }
-    
+        }<br/>
+          <button class="click"onClick={this.handleCloseModal}>Close Modal</button>
+        </ReactModal>
+          
+       
 
+                                <div>
+        <button class="click"onClick={this.handleOpenModal}>Start Quiz</button>
+       
+      </div>
+                                 
         </div>
         </div>)
     }

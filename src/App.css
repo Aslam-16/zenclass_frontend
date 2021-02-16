@@ -36,3 +36,84 @@
     transform: rotate(360deg);
   }
 }
+.point {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+panel-heading.collapsed .fa-chevron-right,
+.panel-heading .fa-chevron-down {
+  display: inline-block;
+}
+
+.faq-accordion .card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.faq-question {
+  width: 100%;
+  flex-basis: 100%;
+  order: 1;
+}
+
+.faq-answer {
+  order: 2;
+}
+
+/* Style for when the body is closed */
+.faq-question {
+  background-color: #CCCCCC;
+  color: #000;
+}
+
+/* Style for header when body is fully open */
+.faq-answer.show+.faq-question {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Style for header when body is closing */
+.faq-answer.collapsing+.faq-question {
+ font-family: 'Glyphicons Halflings';
+ font-size:12px;
+ content: "\e114";
+
+ float: right;
+ transition: all 0.5s;
+
+ color:#5D267C;
+ width:5px;
+ height:5px;
+ margin-top:-15px;
+ margin-right: 12px;
+ background-color: #F0EFF4;
+
+}
+.ReactModalclass {
+  padding:20px;
+  width:742px;
+  margin-left:500px;
+  margin-top:100px;
+  height:342px;
+  border-width: 0px;
+  border:1px solid white
+}
+.ReactModalclass:hover {
+  text-decoration:none;
+}
+/* Style for when header is opening */
+.faq-answer.collapsing:not([style=''])+.faq-question {
+  content: "\e114";
+  /* adjust as needed, taken from bootstrap.css */
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color:#edd5fc;
+  width:5px;
+  height:5px;
+  margin-top:-15px;
+  margin-right: 12px;
+  background-color: #F0EFF4;
+
+}
